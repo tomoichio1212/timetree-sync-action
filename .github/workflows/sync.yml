@@ -2,14 +2,16 @@ name: TimeTree Sync
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
 
   # Public配布用では定期実行を無効化しています。
   # 利用する場合は、下記3行の「#」を削除してください。
   # 
   # schedule:
   #   - cron: "15 */6 * * *"
-   schedule:
-     - cron: "*/15 * * * *"
+  # schedule:
+  #   - cron: "*/15 * * * *"
 
 jobs:
   sync:
